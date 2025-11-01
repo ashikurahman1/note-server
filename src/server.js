@@ -70,6 +70,10 @@ app.use(express.json());
 app.use(rateLimiter);
 
 // API routes
+app.get('/', (req, res) => {
+  res.send('Welcome to server');
+});
+// API routes
 app.use('/api/notes', notesRoutes);
 
 // Start server after DB connection
